@@ -61,6 +61,7 @@ def inRange(ip: str, netmask: str) -> bool:
     for ip_oct, netmask_oct, cidr_oct in zip(ip, netmask_base, cidr_block):
         if not netmask_oct <= int(ip_oct) <= (netmask_oct + 255 - cidr_oct):
             valid = False
+            break
 
     return valid
 
