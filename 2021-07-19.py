@@ -25,14 +25,17 @@ def subarraySum(arr: List[int], result: int) -> int:
         >>> subarraySum([10 , 2, -2, -20, 10], 0)
         2
     """
-
     out = arr.count(result)
-    new_arr = arr.copy()
-    for i in range(1, len(arr)):
-        new_arr = [a + b for a, b in zip(arr[i:], new_arr)]
-        out += new_arr.count(result)
+    sum_tracker = arr.copy()
 
-    return out if out else -1
+    # Shift start for loop 2
+    for i in range(1, len(arr)):
+        # Go through tail arrays from shifted start
+        for ii, a in enumerate(arr[i:]):
+            sum_tracker[ii] += a
+            out += sum_tracker[ii] == result
+
+    return out or -1
 
 
 if __name__ == "__main__":
