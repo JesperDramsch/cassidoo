@@ -34,6 +34,9 @@ def zerosEndingFactorial(factor: int) -> int:
 
         >>> zerosEndingFactorial(100)
         24
+
+        >>> zerosEndingFactorial(1000)
+        249
     """
 
     # Find the largest exponential of 5 in factorial
