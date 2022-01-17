@@ -1,4 +1,5 @@
 from typing import List
+from collections import Counter
 
 
 def wordle_guess(guess: str, solution: str) -> str:
@@ -32,15 +33,21 @@ def wordle_guess(guess: str, solution: str) -> str:
     >>> wordle_guess('lodge', 'fudge')
     '⬛⬛🟩🟩🟩'
 
+    >>> wordle_guess('deeds', 'fudge')
+    '🟨🟨⬛⬛⬛'
+
     """
 
+    occurrences = Counter(solution)
     matches: List[str] = ["⬛"] * len(guess)
 
-    for i, (letter, expected) in enumerate(zip(guess, solution)):
-        if letter == expected:
+    # 🟩 🟨 ⬛
+    for i, letter in enumerate(guess):
+        if letter == solution[i]:
             matches[i] = "🟩"
-        elif letter in solution:
+        elif occurrences[letter] > 0:
             matches[i] = "🟨"
+            occurrences[letter] -= 1
 
     return "".join(matches)
 
