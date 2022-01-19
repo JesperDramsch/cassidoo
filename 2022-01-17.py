@@ -36,6 +36,8 @@ def wordle_guess(guess: str, solution: str) -> str:
     >>> wordle_guess('deeds', 'fudge')
     '🟨🟨⬛⬛⬛'
 
+    >>> wordle_guess('error', 'tries')
+    '🟨🟩⬛⬛⬛'
     """
 
     occurrences = Counter(solution)
@@ -47,7 +49,7 @@ def wordle_guess(guess: str, solution: str) -> str:
             matches[i] = "🟩"
         elif occurrences[letter] > 0:
             matches[i] = "🟨"
-            occurrences[letter] -= 1
+        occurrences[letter] -= 1
 
     return "".join(matches)
 
