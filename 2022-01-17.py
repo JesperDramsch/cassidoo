@@ -38,18 +38,25 @@ def wordle_guess(guess: str, solution: str) -> str:
 
     >>> wordle_guess('error', 'tries')
     '🟨🟩⬛⬛⬛'
-    """
 
-    occurrences = Counter(solution)
+    >>> wordle_guess('cooks', 'blond')
+    '⬛⬛🟩⬛⬛'
+    """
     matches: List[str] = ["⬛"] * len(guess)
 
+    occurrences = Counter(solution)
+
     # 🟩 🟨 ⬛
-    for i, letter in enumerate(guess):
-        if letter == solution[i]:
+
+    for i in len(guess):
+        if guess[i] == solution[i]:
             matches[i] = "🟩"
-        elif occurrences[letter] > 0:
+            occurrences[guess[i]] -= 1
+
+    for i, letter in enumerate(guess):
+        if occurrences[letter] > 0:
             matches[i] = "🟨"
-        occurrences[letter] -= 1
+            occurrences[letter] -= 1
 
     return "".join(matches)
 
