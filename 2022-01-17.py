@@ -26,7 +26,6 @@ def wordle_guess(guess: str, solution: str) -> str:
 
     Example
     -------
-
     >>> wordle_guess('reads', 'fudge')
     '⬛🟨⬛🟨⬛'
 
@@ -41,19 +40,31 @@ def wordle_guess(guess: str, solution: str) -> str:
 
     >>> wordle_guess('cooks', 'blond')
     '⬛⬛🟩⬛⬛'
+
+    >>> wordle_guess('abbbb', 'aaccc')
+    '🟩⬛⬛⬛⬛'
     """
+    # Generate list with all misses as default
     matches: List[str] = ["⬛"] * len(guess)
 
+    # Get counts of letters in the solution
     occurrences = Counter(solution)
 
-    # 🟩 🟨 ⬛
+    # Prepare dictionary for sparse misplaced letters
+    misplaced_candidate = {}
 
-    for i in len(guess):
-        if guess[i] == solution[i]:
-            matches[i] = "🟩"
-            occurrences[guess[i]] -= 1
-
+    # 🟩 ⬛ Handle exact matches and misses
     for i, letter in enumerate(guess):
+        # Exact match
+        if letter == solution[i]:
+            matches[i] = "🟩"
+            occurrences[letter] -= 1
+        # Not misses, so candidate for misplaced
+        elif occurrences[letter] > 0:
+            misplaced_candidate[i] = letter
+
+    # 🟨 Handle possibly misplaced letters
+    for i, letter in misplaced_candidate.items():
         if occurrences[letter] > 0:
             matches[i] = "🟨"
             occurrences[letter] -= 1
@@ -65,3 +76,9 @@ if __name__ == "__main__":
     import doctest
 
     doctest.testmod()
+
+    print(wordle_guess("irate", "frame"))
+    print(wordle_guess("later", "frame"))
+    print(wordle_guess("soare", "frame"))
+    print(wordle_guess("roate", "frame"))
+    print(wordle_guess("crane", "frame"))
