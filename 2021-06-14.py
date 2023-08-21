@@ -1,5 +1,5 @@
 def printArrow(direction, length):
-    """Print an arrow in direction and length the user provides
+    """Print an arrow in direction and length the user provides.
 
     Example:
         printArrow("left", 3)
@@ -15,9 +15,9 @@ def printArrow(direction, length):
     """
     print("Output:")
 
-    if direction is "left":
+    if direction == "left":
         offset = 0
-    elif direction is "right":
+    elif direction == "right":
         offset = length
     else:
         raise

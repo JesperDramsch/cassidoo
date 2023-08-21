@@ -2,7 +2,7 @@ from itertools import groupby
 
 
 def lonely_number(*args):
-    """Supply your numbers and get the product of the lonely numbers
+    """Supply your numbers and get the product of the lonely numbers.
 
     Given three numbers, return their product.
     But, if one of the numbers is the same as another, it does not count:

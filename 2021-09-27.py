@@ -2,7 +2,7 @@ from typing import List
 
 
 def eval_and_or_xor(one: bool, op: str, two: bool) -> bool:
-    """Evaluate three components with using 'eval()'
+    """Evaluate three components with using 'eval()'.
 
     Parameters
     ----------
@@ -28,7 +28,7 @@ def eval_and_or_xor(one: bool, op: str, two: bool) -> bool:
 
 
 def recur_eval(components: List, results: List, pointer: int = 0) -> List[bool]:
-    """Recurring evaluation of parantheses combinations
+    """Recurring evaluation of parantheses combinations.
 
     Parameters
     ----------
@@ -57,9 +57,7 @@ def recur_eval(components: List, results: List, pointer: int = 0) -> List[bool]:
         # Iterate through expressions right of pointer
         for ii in range(i, len(components) - 2, 4):
             # Combine current expression pair
-            combined = eval_and_or_xor(
-                components[ii], components[ii + 1], components[ii + 2]
-            )
+            combined = eval_and_or_xor(components[ii], components[ii + 1], components[ii + 2])
             # Make the print kinda nice
             # print(ii, i, "{", components[ii], components[ii+1], components[ii+2], "\t} = ", combined)
 
@@ -73,7 +71,7 @@ def recur_eval(components: List, results: List, pointer: int = 0) -> List[bool]:
 
 
 def evaluateExp(expression: str) -> int:
-    """Evaluate all parentheses for a given expression
+    """Evaluate all parentheses for a given expression.
 
     Given a string expression with the symbols T for true,
     F for false, & for AND, | for OR, and ^ for XOR, count

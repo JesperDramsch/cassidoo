@@ -2,7 +2,7 @@ from typing import List
 
 
 def longestPrefix(data: List[str]) -> str:
-    """Find the longest common prefix in a list of strings
+    """Find the longest common prefix in a list of strings.
 
     Parameters
     ----------

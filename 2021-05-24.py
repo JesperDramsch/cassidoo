@@ -10,14 +10,12 @@ class ConnectFour:
         self.width = width
         self.board = [[" "] * height for _ in range(width)]
         self.player_one = input("Player One choose a Token: ")[0]
-        self.player_two = (
-            input("Player Two choose a Token: ")[0] if not self.single_player else "🤖"
-        )
+        self.player_two = input("Player Two choose a Token: ")[0] if not self.single_player else "🤖"
         self.player_one_turn = True
         self._won = False
 
     def board_state(self):
-        """Returns a 2D version of the game state"""
+        """Returns a 2D version of the game state."""
         self.screen = curses.initscr()
 
         def _print_line(x, y):
@@ -41,7 +39,7 @@ class ConnectFour:
             curses.endwin()
 
     def has_won(self):
-        """Return which player has won"""
+        """Return which player has won."""
         if self._won:
             return "Player One won" if self.player_one_turn else "Player Two won"
 
@@ -53,7 +51,7 @@ class ConnectFour:
             self.board_state()
 
     def _check_win(self, column, height):
-        """Check if this turn won
+        """Check if this turn won.
 
         Args:
             column (int): column token was dropped
@@ -75,10 +73,7 @@ class ConnectFour:
             return
 
         # Check Horizontal next
-        horizontal = [
-            self.board[col][height]
-            for col in range(max(0, column - 3), min(column + 4, self.width))
-        ]
+        horizontal = [self.board[col][height] for col in range(max(0, column - 3), min(column + 4, self.width))]
         if winner(horizontal):
             self._won = True
             return
@@ -123,9 +118,7 @@ class ConnectFour:
                 new_token = randint(0, self.width - 1)
                 curses.napms(randint(0, self.width * 100))  # Thinking time
             else:
-                new_token = self.which_column(
-                    self.height + 5, 0, player + "! Choose a column: "
-                )
+                new_token = self.which_column(self.height + 5, 0, player + "! Choose a column: ")
             if not new_token:
                 return
             elif self.board[new_token][-1] == " ":
@@ -137,9 +130,7 @@ class ConnectFour:
 
         # Fill Column
         position = self.board[new_token].index(" ")
-        self.board[new_token][position] = (
-            self.player_one if self.player_one_turn else self.player_two
-        )
+        self.board[new_token][position] = self.player_one if self.player_one_turn else self.player_two
 
         # Check for win condition.
         self._check_win(new_token, position)
@@ -148,9 +139,7 @@ class ConnectFour:
         if self._won:
             win_text = ["Congratulations " + player + "!", "You won!"]
             for i, txt in enumerate(win_text):
-                self.screen.addstr(
-                    self.height // 2 + i, max(1, (4 * self.width - len(txt)) // 2), txt
-                )
+                self.screen.addstr(self.height // 2 + i, max(1, (4 * self.width - len(txt)) // 2), txt)
             self.screen.refresh()
             curses.napms(2500)
         # or Advance to next player

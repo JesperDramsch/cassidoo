@@ -2,7 +2,7 @@ import re
 
 
 def parseHTML(html: str):
-    """Generate list from raw html
+    """Generate list from raw html.
 
     Parameters
     ----------

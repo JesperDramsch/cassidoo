@@ -2,7 +2,7 @@ from typing import List
 
 
 def subarraySum(arr: List[int], result: int) -> int:
-    """Count the subarrays that result in predicted number
+    """Count the subarrays that result in predicted number.
 
     Parameters
     ----------

@@ -2,7 +2,7 @@ from math import log
 
 
 def zerosEndingFactorial(factor: int) -> int:
-    """Count the zeros ending a factorial
+    """Count the zeros ending a factorial.
 
     The number of trailing zeros is dictated by the number of fives in the
     prime factor decomposition of the factors. That's simply due to the fact

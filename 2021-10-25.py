@@ -1,5 +1,5 @@
 def longestPalindrome(string: str) -> str:
-    """Find the longest palindrome with a wildcard string
+    """Find the longest palindrome with a wildcard string.
 
     Given a string s where some of the letters can
     be “wilds” (denoted by an underscore _), find the
@@ -64,11 +64,7 @@ def longestPalindrome(string: str) -> str:
             while (
                 (start >= 0)
                 and (end < str_len)
-                and (
-                    (string[start] == string[end])
-                    or (string[start] == "_")
-                    or (string[end] == "_")
-                )
+                and ((string[start] == string[end]) or (string[start] == "_") or (string[end] == "_"))
             ):
                 start -= 1
                 end += 1

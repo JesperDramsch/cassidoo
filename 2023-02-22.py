@@ -1,5 +1,5 @@
 def numBalanced(parens: str) -> int:
-    """Number of unbalanced parenthese
+    """Number of unbalanced parenthese.
 
     Given a string of parenthesis, return the number of parenthesis you need to add to the string in order for it to be balanced.
 

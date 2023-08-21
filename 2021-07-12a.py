@@ -1,8 +1,5 @@
-from typing import Tuple
-
-
 def binarize(ip: str) -> str:
-    """Generate Binary mask from IP
+    """Generate Binary mask from IP.
 
     Parameters
     ----------

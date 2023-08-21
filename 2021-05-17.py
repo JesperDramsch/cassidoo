@@ -1,5 +1,5 @@
 def doodle_ripoff(*availabilities, meeting_length: int = 60) -> dict:
-    """Make a Doodle Ripoff
+    """Make a Doodle Ripoff.
 
     Return the earliest available time slot for a meeting together
 
@@ -25,7 +25,7 @@ def doodle_ripoff(*availabilities, meeting_length: int = 60) -> dict:
 
 
 def common_slots(availabilities) -> dict:
-    """Get common schedule from all availabilities
+    """Get common schedule from all availabilities.
 
     Args:
         availabilities (list(dict)): List of dictionaries with availabilities
@@ -58,7 +58,7 @@ def common_slots(availabilities) -> dict:
 
 
 def filter_slots(schedule: dict, meeting_length: int) -> dict:
-    """Go through schedule and filter for meeting length
+    """Go through schedule and filter for meeting length.
 
     Args:
         schedule (dict): Common schedule
@@ -80,7 +80,7 @@ def filter_slots(schedule: dict, meeting_length: int) -> dict:
 
 
 def get_earliest(schedule: dict) -> dict:
-    """Return earliest meeting slot
+    """Return earliest meeting slot.
 
     Args:
         schedule (dict): Dictionary with available slots
@@ -95,7 +95,7 @@ def get_earliest(schedule: dict) -> dict:
 
 
 def to_minutes(time: float) -> int:
-    """Convert time to minutes
+    """Convert time to minutes.
 
     Args:
         time (float): Time in 15.30 format
@@ -109,7 +109,6 @@ def to_minutes(time: float) -> int:
 
 
 if __name__ == "__main__":
-
     name_1 = "tina"
     name_2 = "jerome"
     name_3 = "franz"
@@ -145,16 +144,8 @@ if __name__ == "__main__":
 
     print()
     print((name_1, avail_1), (name_2, avail_2), (name_4, avail_4))
-    print(
-        doodle_ripoff(
-            (name_1, avail_1), (name_2, avail_2), (name_4, avail_4), meeting_length=15
-        )
-    )
+    print(doodle_ripoff((name_1, avail_1), (name_2, avail_2), (name_4, avail_4), meeting_length=15))
 
     print()
     print((name_1, avail_1), (name_3, avail_3), (name_3, avail_3), (name_4, avail_4))
-    print(
-        doodle_ripoff(
-            (name_1, avail_1), (name_2, avail_2), (name_3, avail_3), (name_4, avail_4)
-        )
-    )
+    print(doodle_ripoff((name_1, avail_1), (name_2, avail_2), (name_3, avail_3), (name_4, avail_4)))

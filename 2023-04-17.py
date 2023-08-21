@@ -4,7 +4,7 @@ from typing import List
 
 
 def maxPointsOnLine(plane: List[List[int]]) -> int:
-    """Count points in a line on a plane
+    """Count points in a line on a plane.
 
     Args:
         plane (List[List[int, int]]): _description_

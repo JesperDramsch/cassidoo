@@ -2,7 +2,7 @@ from collections import deque
 
 
 def gen_3D(length: int) -> deque:
-    """Generate the 3D ASCII effect for drawCube
+    """Generate the 3D ASCII effect for drawCube.
 
     Args:
         length (int): Length of cube
@@ -24,7 +24,7 @@ def gen_3D(length: int) -> deque:
 
 
 def drawCube(length: int) -> None:
-    """Print a 3D ASCII cube with a length
+    """Print a 3D ASCII cube with a length.
 
     Args:
         length (int): Integer length of cube

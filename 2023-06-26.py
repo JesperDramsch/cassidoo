@@ -2,7 +2,7 @@ from typing import List
 
 
 def missingLetters(letters: List[str]) -> List[str]:
-    """Find missing letters in consecutive list of letters
+    """Find missing letters in consecutive list of letters.
 
     Args:
         letters (List[str]): List of consecutive letters
@@ -16,7 +16,6 @@ def missingLetters(letters: List[str]) -> List[str]:
 
         >>> missingLetters(['a','b','c','d','e','h','i','j','k','l','m','n','o','p','q','r','s','t','u','w','x','y','z'])
         ['f', 'g', 'v']
-
     """
 
     first = ord(letters[0])

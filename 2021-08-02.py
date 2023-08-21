@@ -1,6 +1,7 @@
-import numpy as np
-from typing import List
 from itertools import combinations
+from typing import List
+
+import numpy as np
 
 
 def check_semi_magic_square(square: np.array) -> bool:
@@ -27,7 +28,7 @@ def check_semi_magic_square(square: np.array) -> bool:
 
 
 def missingSevens(magic_square: List[List[int]]) -> int:
-    """Replace numbers in square with 7 to find semi-magic square
+    """Replace numbers in square with 7 to find semi-magic square.
 
     Parameters
     ----------
@@ -49,7 +50,6 @@ def missingSevens(magic_square: List[List[int]]) -> int:
 
         >>> missingSevens([[3,9,6],[8,5,5],[8,4,0]])
         2
-
     """
 
     # This calls for numpy. No way I'll do this by hand.

@@ -1,5 +1,5 @@
 def pSubstring(string: str) -> str:
-    """Find the longest palindromic substring of input
+    """Find the longest palindromic substring of input.
 
     This approach iterates through center points in string and
     grow palindromes out from the center point.

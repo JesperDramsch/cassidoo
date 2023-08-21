@@ -1,5 +1,5 @@
 def luhnCheck(number: int) -> bool:
-    """Check if number is valid according to Luhn algorithm
+    """Check if number is valid according to Luhn algorithm.
 
     Parameters
     ----------

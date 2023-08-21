@@ -31,8 +31,7 @@ def localPeaks(sequence: List[int]) -> List[int]:
     return [
         i
         for i, check in enumerate(sequence)
-        if (sequence[max(0, i - 1)] < check)
-        and (sequence[min(len(sequence) - 1, i + 1)] < check)
+        if (sequence[max(0, i - 1)] < check) and (sequence[min(len(sequence) - 1, i + 1)] < check)
     ]
 
 

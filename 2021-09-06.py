@@ -3,7 +3,7 @@ from functools import singledispatch
 
 @singledispatch
 def convert_type(num):
-    """Convert between str and int
+    """Convert between str and int.
 
     Parameters
     ----------
@@ -20,7 +20,6 @@ def convert_type(num):
 
 @convert_type.register
 def _(num: str) -> int:
-
     map_digits = {
         "0": 0,
         "1": 1,
@@ -45,7 +44,6 @@ def _(num: str) -> int:
 
 @convert_type.register
 def _(num: int) -> str:
-
     map_digits = {
         0: "0",
         1: "1",
@@ -70,7 +68,7 @@ def _(num: int) -> str:
 
 
 def stringProduct(*numbers_as_str: str) -> str:
-    """Multiply any numbers provided as strings
+    """Multiply any numbers provided as strings.
 
     Given two non-negative integers n1 and n2 represented as strings,
     return the product of n1 and n2, also represented as a string.

@@ -9,7 +9,7 @@ def recur_parens(
     open_parens: int = 0,
     close_parens: int = 0,
 ) -> List[str]:
-    """Recursive function to generate well-formed parens pairs
+    """Recursive function to generate well-formed parens pairs.
 
     Parameters
     ----------
@@ -54,7 +54,7 @@ def recur_parens(
 
 
 def formParens(n: int) -> List[str]:
-    """Generate well-formed parentheses
+    """Generate well-formed parentheses.
 
     Parameters
     ----------

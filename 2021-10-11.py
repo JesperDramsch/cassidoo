@@ -1,5 +1,5 @@
 def isOdious(n: int) -> bool:
-    """Find if a number is odious
+    """Find if a number is odious.
 
     An “odious number” is a non-negative number that has an odd number of 1s
     in its binary expansion. Write a function that returns true if a given

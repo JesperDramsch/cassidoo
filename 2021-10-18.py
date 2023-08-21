@@ -2,7 +2,7 @@ from typing import List
 
 
 def reorder(values: List, index: List[int]) -> List:
-    """Reorder list of values according index
+    """Reorder list of values according index.
 
     Parameters
     ----------

@@ -1,6 +1,6 @@
-from typing import List
 import re
 from itertools import groupby
+from typing import List
 
 
 def explodeString(string: str) -> List[str]:
@@ -21,13 +21,10 @@ def explodeString(string: str) -> List[str]:
     >>> explodeString('Ahh, abracadabra!')
     ['!', ',', 'A', 'aaaaa', 'bb', 'c', 'd', 'hh', 'rr']
 
-    >>> explodeString('\o/\o/')
+    >>> explodeString('\\o/\\o/')
     ['//', '\\\\', 'oo']
     """
-    return [
-        "".join(list(g)).replace("\\\\", "\\")
-        for k, g in groupby(sorted(re.sub(r"\s", "", string)))
-    ]
+    return ["".join(list(g)).replace("\\\\", "\\") for k, g in groupby(sorted(re.sub(r"\s", "", string)))]
 
 
 if __name__ == "__main__":

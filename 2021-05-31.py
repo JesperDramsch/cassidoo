@@ -1,5 +1,5 @@
 def inits(data):
-    """Return the prefixes of an iterable
+    """Return the prefixes of an iterable.
 
     Given a list,
     return a list of

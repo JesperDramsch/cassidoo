@@ -2,7 +2,7 @@ import math
 
 
 def simplify(numerator: int, denominator: int) -> str:
-    """Simplify a fraction
+    """Simplify a fraction.
 
     Parameters
     ----------
@@ -47,7 +47,7 @@ def simplify(numerator: int, denominator: int) -> str:
 
 
 def fractionMath(left, operator, right) -> str:
-    """Combine two fractions and simplify the result
+    """Combine two fractions and simplify the result.
 
     Parameters
     ----------

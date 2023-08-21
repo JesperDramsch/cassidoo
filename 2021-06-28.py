@@ -36,12 +36,7 @@ def init():
 
 def animate(i):
     x = np.linspace(0, 4, 1000)
-    y = (
-        -1
-        + np.sin(0.4 * np.pi * (x - 0.01)) * np.sin(0.05 * i)
-        + 0.075 * np.sin(0.01 * i)
-        + 0.25 * x * np.cos(0.05 * i)
-    )
+    y = -1 + np.sin(0.4 * np.pi * (x - 0.01)) * np.sin(0.05 * i) + 0.075 * np.sin(0.01 * i) + 0.25 * x * np.cos(0.05 * i)
     red.set_data(x, y + 2.5)
     orange.set_data(x, y + 2)
     yellow.set_data(x, y + 1.5)

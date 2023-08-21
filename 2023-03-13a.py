@@ -1,10 +1,9 @@
-from fractions import Fraction
 import operator as op
+from fractions import Fraction
 
 
 def fractionMath(left: str, operator: str, right: str) -> str:
-
-    l = Fraction(left)
+    w = Fraction(left)
     r = Fraction(right)
 
     ops = {
@@ -14,7 +13,7 @@ def fractionMath(left: str, operator: str, right: str) -> str:
         "divide": op.__itruediv__,
     }
 
-    return str(ops[operator](l, r))
+    return str(ops[operator](w, r))
 
 
 if __name__ == "__main__":

@@ -2,7 +2,7 @@ from typing import Tuple
 
 
 def binarize(num: int) -> Tuple[int]:
-    """Generate Binary mask from CIDR
+    """Generate Binary mask from CIDR.
 
     Parameters
     ----------

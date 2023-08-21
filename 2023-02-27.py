@@ -2,7 +2,7 @@ from typing import List
 
 
 def repeatedGroups(numbers: List[int]) -> List[List[int]]:
-    """Groups numbers in a list
+    """Groups numbers in a list.
 
     Parameters
     ----------
@@ -21,7 +21,6 @@ def repeatedGroups(numbers: List[int]) -> List[List[int]]:
 
     >>> repeatedGroups([1, 1, 0, 0, 8, 4, 4, 4, 3, 2, 1, 9, 9])
     [[1, 1], [0, 0], [4, 4, 4], [9, 9]]
-
     """
     current_num = numbers[0]
     count = 0
