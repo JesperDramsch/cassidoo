@@ -1,5 +1,6 @@
 from typing import Tuple
 
+
 def binarize(ip: str) -> str:
     """Generate Binary mask from IP
 
@@ -18,9 +19,9 @@ def binarize(ip: str) -> str:
         >>> binarize("192.168.4.0")
         '11000000101010000000010000000000'
     """
-    
+
     return "".join(f"{int(octet):08b}" for octet in ip.split("."))
-    
+
 
 def inRange(ip: str, netmask: str) -> bool:
     """Test if IP is in range of Netmask (CIDR notation)
@@ -44,10 +45,10 @@ def inRange(ip: str, netmask: str) -> bool:
         >>> print(inRange("192.168.4.27", "192.168.1.0/24"))
         False
     """
-    
+
     subnet, cidr = netmask.split("/")
-    
-    return binarize(ip)[:int(cidr)] == binarize(subnet)[:int(cidr)] 
+
+    return binarize(ip)[: int(cidr)] == binarize(subnet)[: int(cidr)]
 
 
 if __name__ == "__main__":

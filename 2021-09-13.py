@@ -65,7 +65,7 @@ def formParens(n: int) -> List[str]:
     -------
     List[str]
         List of well-formed parens pairs
-    
+
     Examples
     --------
         >>> formParens(1)

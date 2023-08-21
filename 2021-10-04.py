@@ -5,7 +5,7 @@ from itertools import combinations_with_replacement
 def distinctCombos(items: List[int], length: int) -> List[List[int]]:
     """Find the distinct combinations of an input list
 
-    Given an integer array, find all distinct combinations of 
+    Given an integer array, find all distinct combinations of
     a given length x (with repetition allowed).
 
     Parameters
@@ -19,7 +19,7 @@ def distinctCombos(items: List[int], length: int) -> List[List[int]]:
     -------
     List[List[int]]
         Distinct combinations
-    
+
     Examples
     --------
         >>> distinctCombos([1,1,2], 2)

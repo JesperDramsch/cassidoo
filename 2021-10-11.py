@@ -1,9 +1,8 @@
-
-def isOdious(n: int)-> bool:
+def isOdious(n: int) -> bool:
     """Find if a number is odious
 
-    An “odious number” is a non-negative number that has an odd number of 1s 
-    in its binary expansion. Write a function that returns true if a given 
+    An “odious number” is a non-negative number that has an odd number of 1s
+    in its binary expansion. Write a function that returns true if a given
     number is odious.
 
     Parameters
@@ -27,14 +26,15 @@ def isOdious(n: int)-> bool:
 
     # Check if the number is non-negative
     if n < 0:
-        raise ValueError('Number is negative. Supply non-negative number.')
+        raise ValueError("Number is negative. Supply non-negative number.")
 
     # Nice little one-liner does:
     # 1. Convert to binary
     # 2. Count 1s
     # 3. Mod 2 to see if even or odd
     # 4. Convert to bool, because odd is 1 and True
-    print(bool(f'{n:b}'.count("1") % 2))
+    print(bool(f"{n:b}".count("1") % 2))
+
 
 if __name__ == "__main__":
     import doctest

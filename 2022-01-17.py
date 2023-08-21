@@ -5,7 +5,7 @@ from collections import Counter
 def wordle_guess(guess: str, solution: str) -> str:
     """Given a guess and a solution, return the wordle representation of the guess.
 
-    Using the rules of Wordle, given a guess word and a solution word, 
+    Using the rules of Wordle, given a guess word and a solution word,
     return a set of emojis returned from the guessWord.
 
     If the letter matches exactly in the position: 🟩

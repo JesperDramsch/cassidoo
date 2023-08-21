@@ -32,4 +32,3 @@ if __name__ == "__main__":
     printArrow("left", 5)
 
     printArrow("left", 4)
-

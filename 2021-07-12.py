@@ -24,7 +24,7 @@ def binarize(num: int) -> Tuple[int]:
     """
     bin_mask = "1" * num + "0" * (32 - num)
 
-    return tuple(int(bin_mask[i:i+8], base=2) for i in range(0, 32, 8))
+    return tuple(int(bin_mask[i : i + 8], base=2) for i in range(0, 32, 8))
 
 
 def inRange(ip: str, netmask: str) -> bool:

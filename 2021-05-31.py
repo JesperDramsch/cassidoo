@@ -1,9 +1,9 @@
 def inits(data):
-    """ Return the prefixes of an iterable
-        
-    Given a list, 
-    return a list of 
-    all its prefixes 
+    """Return the prefixes of an iterable
+
+    Given a list,
+    return a list of
+    all its prefixes
     in ascending order of their length.
 
     Args:
@@ -21,4 +21,3 @@ if __name__ == "__main__":
     print(inits([144]))
 
     print(inits("banana"))
-

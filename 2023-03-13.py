@@ -97,7 +97,6 @@ def fractionMath(left, operator, right) -> str:
     r_numerator *= l_denominator
     new_denominator, l_denominator, r_denominator = (r_denominator * l_denominator,) * 3
 
-    
     if operator == "add":
         new_numerator = l_numerator + r_numerator
     elif operator == "subtract":

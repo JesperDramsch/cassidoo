@@ -61,7 +61,7 @@ def filter_slots(schedule: dict, meeting_length: int) -> dict:
     """Go through schedule and filter for meeting length
 
     Args:
-        schedule (dict): Common schedule 
+        schedule (dict): Common schedule
         meeting_length (int): Meeting length in minutes
 
     Returns:
@@ -139,7 +139,6 @@ if __name__ == "__main__":
     print((name_3, avail_3), (name_4, avail_4))
     print(doodle_ripoff((name_3, avail_3), (name_4, avail_4)))
 
-
     print()
     print((name_1, avail_1), (name_4, avail_4))
     print(doodle_ripoff((name_1, avail_1), (name_4, avail_4)))
@@ -159,4 +158,3 @@ if __name__ == "__main__":
             (name_1, avail_1), (name_2, avail_2), (name_3, avail_3), (name_4, avail_4)
         )
     )
-

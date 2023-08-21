@@ -17,8 +17,7 @@ class ConnectFour:
         self._won = False
 
     def board_state(self):
-        """Returns a 2D version of the game state
-        """
+        """Returns a 2D version of the game state"""
         self.screen = curses.initscr()
 
         def _print_line(x, y):
@@ -42,14 +41,12 @@ class ConnectFour:
             curses.endwin()
 
     def has_won(self):
-        """Return which player has won
-        """
+        """Return which player has won"""
         if self._won:
             return "Player One won" if self.player_one_turn else "Player Two won"
 
     def play(self):
-        """Start the game!
-        """
+        """Start the game!"""
         self._play = True
         while not self._won and self._play:
             self.turn()

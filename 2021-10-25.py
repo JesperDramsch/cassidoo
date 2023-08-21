@@ -1,15 +1,15 @@
 def longestPalindrome(string: str) -> str:
-    """ Find the longest palindrome with a wildcard string
-    
-    Given a string s where some of the letters can 
-    be “wilds” (denoted by an underscore _), find the 
-    longest palindrome possible from the letters of s in 
+    """Find the longest palindrome with a wildcard string
+
+    Given a string s where some of the letters can
+    be “wilds” (denoted by an underscore _), find the
+    longest palindrome possible from the letters of s in
     order, where the wilds can be any character.
 
-    This can rely heavily on the solution from 2021-08-17 
+    This can rely heavily on the solution from 2021-08-17
     where we found the longest palindromic substring.
 
-    This approach iterates through center points in string and 
+    This approach iterates through center points in string and
     grows palindromes out from the center point.
 
     Time complexity is O(n) I think (worst case is 1.5n), so it should be linear.
@@ -64,7 +64,11 @@ def longestPalindrome(string: str) -> str:
             while (
                 (start >= 0)
                 and (end < str_len)
-                and ((string[start] == string[end]) or (string[start] == "_") or (string[end] == "_"))
+                and (
+                    (string[start] == string[end])
+                    or (string[start] == "_")
+                    or (string[end] == "_")
+                )
             ):
                 start -= 1
                 end += 1
@@ -86,10 +90,10 @@ def longestPalindrome(string: str) -> str:
         # Find wildcards
         if substring[i] == "_":
             # If opposite letter over centerpoint is also wildcard just use "a"
-            if substring[substr_len-i-1] == "_":
-                substring[substr_len-i-1] = "a"
+            if substring[substr_len - i - 1] == "_":
+                substring[substr_len - i - 1] = "a"
             # Replace current wildcard with opposite letter over centerpoint
-            substring[i] = substring[substr_len-i-1]
+            substring[i] = substring[substr_len - i - 1]
 
     return "".join(substring)
 

@@ -25,7 +25,11 @@ def generateMinesweeper(gridSize: int, mines: List[List[int]]) -> None:
     playing_field = zeros((gridSize, gridSize), dtype=int)
 
     # Validate mine input
-    mines = tuple(filter(lambda coord: 0 < coord[0] <= gridSize and 0 < coord[1] <= gridSize, mines))
+    mines = tuple(
+        filter(
+            lambda coord: 0 < coord[0] <= gridSize and 0 < coord[1] <= gridSize, mines
+        )
+    )
 
     # Iterate over mines for adjacency +1
     for coord in mines:

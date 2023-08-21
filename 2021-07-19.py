@@ -15,7 +15,7 @@ def subarraySum(arr: List[int], result: int) -> int:
     -------
     int
         Number of subarrays that sum to result
-    
+
     Example
     -------
         >>> subarraySum([10 , 2, -2, -20, 10], -10)

@@ -1,7 +1,7 @@
 def pSubstring(string: str) -> str:
     """Find the longest palindromic substring of input
 
-    This approach iterates through center points in string and 
+    This approach iterates through center points in string and
     grow palindromes out from the center point.
 
     Time complexity is O(n) I think (worst case is 1.5n), so it should be linear.

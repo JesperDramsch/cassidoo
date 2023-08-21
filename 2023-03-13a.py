@@ -7,10 +7,12 @@ def fractionMath(left: str, operator: str, right: str) -> str:
     l = Fraction(left)
     r = Fraction(right)
 
-    ops = {"add":      op.__add__, 
-           "subtract": op.__sub__, 
-           "multiply": op.__mul__, 
-           "divide":   op.__itruediv__}
+    ops = {
+        "add": op.__add__,
+        "subtract": op.__sub__,
+        "multiply": op.__mul__,
+        "divide": op.__itruediv__,
+    }
 
     return str(ops[operator](l, r))
 

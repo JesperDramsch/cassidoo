@@ -29,7 +29,7 @@ def repeatedGroups(numbers: List[int]) -> List[List[int]]:
     for num in numbers + [None]:
         if current_num != num:
             if count > 1:
-                out.append([current_num]*count)
+                out.append([current_num] * count)
             count = 0
             current_num = num
         count += 1

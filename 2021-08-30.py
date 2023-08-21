@@ -13,7 +13,7 @@ def longestPrefix(data: List[str]) -> str:
     -------
     str
         Longest prefix in list
-    
+
     Examples
     --------
         >>> longestPrefix(["cranberry","crawfish","crap"])

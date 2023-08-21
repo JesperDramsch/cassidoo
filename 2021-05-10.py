@@ -1,4 +1,3 @@
-
 def sameDigits(num: int) -> bool:
     """Given an integer n, return true if n^3 and n have the same set of digits.
 
@@ -15,7 +14,7 @@ def sameDigits(num: int) -> bool:
 
 
 if __name__ == "__main__":
-    assert sameDigits(1) # true
-    assert sameDigits(10) # true
-    assert sameDigits(251894) # true
-    assert not sameDigits(251895) # false
+    assert sameDigits(1)  # true
+    assert sameDigits(10)  # true
+    assert sameDigits(251894)  # true
+    assert not sameDigits(251895)  # false

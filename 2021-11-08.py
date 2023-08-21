@@ -2,7 +2,7 @@ from typing import List
 
 
 def localPeaks(sequence: List[int]) -> List[int]:
-    """Given an array of integers, return the index of each local peak. 
+    """Given an array of integers, return the index of each local peak.
 
     A “peak” element is an element that is greater than its neighbors.
 
@@ -31,7 +31,8 @@ def localPeaks(sequence: List[int]) -> List[int]:
     return [
         i
         for i, check in enumerate(sequence)
-        if (sequence[max(0, i - 1)] < check) and (sequence[min(len(sequence) - 1, i + 1)] < check)
+        if (sequence[max(0, i - 1)] < check)
+        and (sequence[min(len(sequence) - 1, i + 1)] < check)
     ]
 
 
